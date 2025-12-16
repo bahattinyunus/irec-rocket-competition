@@ -1,5 +1,7 @@
 # 🚀 PROXIMA GÖREVİ | Spaceport America Cup Reposu
 
+![Python](https://img.shields.io/badge/python-3670A0?style=for-the-badge&logo=python&logoColor=ffdd54) ![C++](https://img.shields.io/badge/c++-%2300599C.svg?style=for-the-badge&logo=c%2B%2B&logoColor=white) ![OpenRocket](https://img.shields.io/badge/OpenRocket-Sim-blueviolet?style=for-the-badge) ![SolidWorks](https://img.shields.io/badge/SolidWorks-CAD-red?style=for-the-badge) ![Altium](https://img.shields.io/badge/Altium-PCB-yellow?style=for-the-badge)
+
 ![Banner](https://img.shields.io/badge/Görev-PROXIMA-orange?style=for-the-badge) ![Yarışma](https://img.shields.io/badge/Yarışma-Spaceport_America_Cup-blue?style=for-the-badge) ![Konum](https://img.shields.io/badge/Fırlatma_Sahası-New_Mexico_ABD-red?style=for-the-badge) ![Durum](https://img.shields.io/badge/Durum-Geliştirme_Aşamasında-green?style=for-the-badge)
 
 ## 🌌 Görev Tanımı (Mission Statement)
@@ -36,15 +38,25 @@ Aşağıdaki raporlar, Spaceport America Cup standartlarını yakalamamız için
 ---
 
 ## 📂 Repo Yapısı (Repository Structure)
-Bu repo, **ESRA** teslimat zaman çizelgesini yansıtacak şekilde düzenlenmiştir.
 
-| Dizin | Açıklama | ESRA Teslimatı |
-| :--- | :--- | :--- |
-| **`docs/01_Milestones_&_Updates`** | İlerleme güncellemeleri ve büyük tasarım gözden geçirme sunumları. | **PDR, CDR** |
-| **`docs/02_Technical_Report`** | "Kutsal Kase". Her sistemin detaylı dökümantasyonu. | **Teknik Rapor** |
-| **`docs/03_Safety_&_SRAD`** | Risk değerlendirmesi, tehlike analizi ve operasyonel kontrol listeleri. | **Güvenlik Dökümanları** |
-| **`docs/04_Subsystems_&_Payload`** | Aviyonik, İtki, Yapısal ve Kurtarma sistemlerine derinlemesine bakış. | **Tasarım Dökümanları** |
-| **`analysis/`** | Python betikleri (RocketPy), OpenRocket dosyaları ve CFD sonuçları. | **Uçuş Analizi** |
+```bash
+📦 ktu-rocket-irec
+ ┣ 📂 .github
+ ┃ ┣ 📂 ISSUE_TEMPLATE (Hata & Özellik Bildirimleri)
+ ┃ ┗ 📜 pull_request_template.md
+ ┣ 📂 analysis (Simülasyonlar & Analizler)
+ ┃ ┣ 📜 example_sim.py
+ ┃ ┗ 📜 requirements.txt
+ ┣ 📂 docs
+ ┃ ┣ 📂 00_Competition_Guide (Yarışma Kuralları & Rehber)
+ ┃ ┣ 📂 01_Milestones_&_Updates (PDR, CDR Sunumları)
+ ┃ ┣ 📂 02_Technical_Report (Teknik Rapor Taslakları)
+ ┃ ┣ 📂 03_Safety_&_SRAD (Güvenlik & Risk Analizleri)
+ ┃ ┣ 📂 04_Subsystems_&_Payload (Alt Sistem Tasarımları)
+ ┃ ┗ 📂 reference_reports (Örnek Rapor Arşivi)
+ ┗ 📜 README.md
+```
+Irec teslimat takvimine tam uyumlu klasör yapısı.
 
 ---
 
