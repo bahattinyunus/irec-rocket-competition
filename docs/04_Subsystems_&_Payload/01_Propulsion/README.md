@@ -1,39 +1,56 @@
-# 🚀 İtki Sistemi (Propulsion) Bilgi Bankası
+# 🚀 İtki Sistemi (Propulsion) Derinlemesine Teknik Rehber
 
-## 1. Temel Kavramlar & Formüller
-Motor tasarımında kullanılan "Kutsal" denklemler.
+![Banner](../../../assets/banner.png)
 
-### 1.1. Toplam İtki (Total Impulse)
-Roketin sınıfını belirleyen temel değer.
-$$ I_{total} = \int_{0}^{t_{burn}} F(t) dt $$
-*   **M-Class:** 5,120 - 10,240 Ns
-*   **L-Class:** 2,560 - 5,120 Ns
+## 1. Hibrit Motor Teorisi (SRAD - Hybrid)
+IREC 30k kategorisinde "Kutsal Kase" hibrit motorlardır.
+*   **Yakıt (Fuel):** Genellikle **Paraffin Wax** (Mum) veya **HTPB**. Parafinin yanma hızı (regression rate) yüksektir.
+*   **Oksitleyici (Oxidizer):** **Nitrous Oxide ($N_2O$)**. Kendinden basınçlıdır (Vapor Pressure @ 20°C $\approx$ 50 bar).
 
-### 1.2. Özgül İtki (Specific Impulse - $I_{sp}$)
-Motor verimliliğinin ölçüsü.
-$$ I_{sp} = \frac{F}{\dot{m} g_0} $$
-*   **Katı Yakıt (APCP):** 200-260 sn
-*   **Hibrit (N2O/Paraffin):** 220-290 sn
+### 1.1. Enjektör Tasarımı (Injector)
+Motorun kalbidir. $N_2O$'nun sıvı fazda yanma odasına püskürtülmesi gerekir.
+*   **Discharge Coefficient ($C_d$):** Enjektör deliklerinin verimi. Genellikle 0.6 - 0.7 arası alınır.
+*   **Atomizasyon:** Oksitleyici ne kadar iyi parçalanırsa yanma o kadar verimli olur. (Showerhead vs Impinging jet).
 
-## 2. Motor Seçimi (Trade-off Analizi)
+### 1.2. Yanma Kararsızlığı (Instability)
+Hibrit motorların baş belasıdır. "Chugging" (Düşük frekans) ve "Screaming" (Yüksek frekans) olarak ikiye ayrılır.
+*   **Önlem:** Pre-combustion chamber (Ön yanma odası) hacmini doğru ayarlamak.
 
-| Tip | Avantaj | Dezavantaj | IREC Önerisi |
-| :--- | :--- | :--- | :--- |
-| **COTS (Hazır)** | %99 Güvenilirlik, Kolay montaj. | Puan getirisi düşük, Pahalı (Cesaroni L2200 gibi). | **10k feet için** ideal. Riski minimize eder. |
-| **SRAD (Katı)** | Yüksek puan, Tam kontrol. | Üretim tesisi/izni gerekir. Patlama riski. | Zorunlu değilse **kaçının**. |
-| **SRAD (Hibrit)** | "Mühendislik Harikası", Güvenli (Patlamaz). | Vana/Tank sistemleri çok karmaşık. Yer testi zordur. | **30k için** en iyi seçenek. |
+---
 
-## 3. Üretim & Test Kontrol Listesi
-### Katı Motor (Varsa)
-1.  [ ] Grain Casting: Vakum altında döküm yapıldı mı? (Baloncuk = Patlama)
-2.  [ ] Liner Bonding: İzolasyon ile yakıt yapıştı mı?
-3.  [ ] Nozzle Erosion: Grafit kalitesi yeterli mi?
+## 2. Katı Yakıt Motorları (COTS & SRAD)
 
-### Hibrit Motor
-1.  [ ] Hidrotest: Tank basınca dayanıyor mu? (Çalışma basıncının 1.5 katı)
-2.  [ ] Soğuk Akış (Cold Flow): Oksitleyici akışı düzgün mü?
-3.  [ ] Ateşleme Sistemi: Uzaktan (100m) kontrol çalışıyor mu?
+### 2.1. COTS Motor Seçimi
+Cesaroni (CTI) veya Aerotech motorları standarttır.
+*   **Motor Kodu Okuma:** `L2200G-P`
+    *   **L:** Total Impulse sınıfı (2560-5120 Ns).
+    *   **2200:** Ortalama itki (Newton).
+    *   **G:** Yakıt tipi (Green / Blue vs).
+*   **Seçim Kriteri:** Roketinizi 5G - 10G arası bir ivmeyle rampadan çıkarmalıdır (**Thrust-to-Weight Ratio > 5**).
+
+### 2.2. Grain Geometrisi (SRAD)
+Yanma yüzey alanı ($A_b$), itki profilini belirler.
+*   **Bates Grain:** İstikrarlı, düz bir itki profili verir. (En yaygın).
+*   **Star Grain (Yıldız):** Başlangıçta çok yüksek itki, sonra düşüş. Hızlı kalkış için ideal.
+*   **Moonburner:** Uzun yanma süresi (Sustainer motorlar için).
+
+---
+
+## 3. Üretim & Test Standartları
+
+### 3.1. Hidrostatik Test (Proof Pressure Test)
+Yanma odası (Combustion Chamber) üretildikten sonra mutlaka su ile basınç testine sokulmalıdır.
+*   **Yöntem:** Çalışma basıncının (MEOP) **1.5 katı** basınçla 10 dakika test edilir.
+*   **Güvenlik:** Asla hava/gaz ile test yapmayın! Su sıkışmaz, patlarsa sadece ıslanırsınız. Gaz patlarsa şarapnel saçar.
+
+### 3.2. Statik Ateşleme (Static Fire)
+Uçmadan önce motoru yerde ateşlemek zorundasınız.
+*   **Load Cell:** İtki verisini (Thrust Curve) kaydetmek için.
+*   **Basınç Transducer:** Yanma odası basıncını ölçmek için.
+*   **Güvenlik Mesafesi:** IREC kurallarına göre en az 50 metre.
+
+---
 
 ## 4. Referans Kaynaklar
-*   **Nakka Rocketry:** [Richard Nakka's Solid Rocket Motor Theory](https://www.nakka-rocketry.net/)
-*   **Rocket Propulsion Elements (Sutton):** Roketçilerin İncil'i.
+*   **Rocket Propulsion Elements (Sutton):** Bölüm 12 (Solid), Bölüm 13 (Hybrid).
+*   **AspireSpace:** Hibrit motor tasarım araçları.

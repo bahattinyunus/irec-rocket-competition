@@ -1,5 +1,7 @@
 # 📂 01_Progress_Updates (İlerleme Güncellemeleri)
 
+![Banner](../../assets/banner.png)
+
 ## Amaç
 Spaceport America Cup, takımların doğru yolda olduğundan emin olmak için yıl boyunca birden fazla "Ara İlerleme Güncellemesi" (Interim Progress Update) talep eder.
 

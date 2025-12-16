@@ -1,0 +1,10 @@
+cff-version: 1.2.0
+message: "If you use this software, please cite it as below."
+authors:
+- family-names: "Yunus"
+  given-names: "Bahattin"
+  affiliation: "KTU Gokcen Rocket Team"
+title: "Proxima Mission: Spaceport America Cup Technical Repository"
+version: 1.0.0
+date-released: 2024-12-16
+url: "https://github.com/bahattinyunus/ktu-sarge-irec"

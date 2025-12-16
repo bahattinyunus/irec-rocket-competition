@@ -1,5 +1,7 @@
 # 📋 Preliminary Design Review (PDR) Rapor Şablonu
 
+![Banner](../../assets/banner.png)
+
 **Proje Adı:** Proxima Mission
 **Tarih:** [Tarih Giriniz]
 **Hazırlayanlar:** [Takım Üyeleri]

@@ -1,5 +1,7 @@
 # 🏆 Spaceport America Cup (IREC) Yarışma Rehberi
 
+![Banner](../../assets/banner.png)
+
 Bu döküman, **Experimental Sounding Rocket Association (ESRA)** tarafından düzenlenen IREC kurallarının, puanlama kriterlerinin ve kritik detayların özetidir. Takımın "Anayasası" niteliğindedir.
 
 > [!IMPORTANT]

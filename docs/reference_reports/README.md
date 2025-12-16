@@ -1,5 +1,7 @@
 # 📚 Referans IREC Teknik Raporları
 
+![Banner](../../assets/banner.png)
+
 Bu klasör, IREC (Spaceport America Cup) yarışmasında başarı elde etmiş takımların herkese açık teknik raporlarını referans olarak sunar. Rapor yazarken bu dökümanları incelemeniz, "Kutsal Kase" standardını yakalamamız için kritiktir.
 
 > [!NOTE]

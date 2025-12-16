@@ -1,5 +1,7 @@
 # 📄 IREC Project Technical Report Şablonu
 
+![Banner](../../assets/banner.png)
+
 **Takım ID:** [ID]
 **Takım Adı:** KTU Gökçen Rocket Team
 **Kategori:** [10k/30k - COTS/SRAD]

@@ -1,25 +1,42 @@
-# 🪂 Kurtarma Sistemi (Recovery) Bilgi Bankası
+# 🪂 Kurtarma Sistemi (Recovery) & Piroteknik
 
-## 1. Dual Deployment (Çift Aşamalı Kurtarma)
-Yüksek irtifa roketlerinde standarttır. Tek paraşütle inerseniz roket rüzgarla kilometrelerce sürüklenir.
+![Banner](../../../assets/banner.png)
 
-1.  **Drogue (Sürüklenme) Paraşütü:** Apogee'de (tepe noktası) açılır. Roketi stabilize eder ve hızlı (tercihen 20-30 m/s) düşüş sağlar.
-2.  **Main (Ana) Paraşüt:** Belirlenen irtifada (örn. 1,000 ft) açılır. Yumuşak iniş (5-7 m/s) sağlar.
+## 1. Paraşüt Aerodinamiği
+Sadece "büyük paraşüt" demek yetmez. İniş kinetik enerjisi hesaplanmalıdır.
+$$ KE = \frac{1}{2} m V^2 $$
+*   **Hedef:** İniş enerjisi < 75 Joule olmalı (İnsan güvenliği ve roket sağlığı için).
+*   **Toroidal vs Elliptical:**
+    *   **Toroidal (Halka):** Yüksek $C_d$ (~2.2). Çok stabildir, salınım yapmaz.
+    *   **Flat Circular:** Basit, ucuz ama çok sallanır (Pendulum effect).
 
-## 2. Paraşüt Boyutlandırma
-İniş hızı hesabı:
-$$ V_{descent} = \sqrt{\frac{2 m g}{\rho C_d A}} $$
-*   **m:** Roket kütlesi
-*   **Cd:** Sürüklenme katsayısı (Düz paraşüt için ~1.5, Eliptik için ~2.2)
-*   **A:** Paraşüt alanı
+## 2. Şok Kordonu (Shock Cord)
+Paraşüt açıldığında oluşan ani yükü (Snatch Force) sönümlemek zorundasınız.
+*   **Malzeme:** **Kevlar** (Isıya dayanıklı, esnemez) veya **Tubular Nylon** (Çok esner, şoku emer).
+*   **Uzunluk:** Gövde boyunun en az 3-4 katı olmalıdır. Kısa kordonlar, paraşüt açılınca gövdelerin birbirine çarpmasına (Zipper effect) neden olur.
+*   **Bağlantı:** Quick link (Maillon) kullanın. Asla kanca (Karabina) kullanmayın, yüksek G'de açılabilirler.
 
-## 3. Barut Miktarı Hesabı (Ejection Charge)
-Ayrılma için ne kadar barut (Black Powder) gerekir?
-$$ F (lbs) = P (psi) \times Area (in^2) $$
-*   Genel kural: İç basıncı **15-20 PSI** yapacak kadar barut.
-*   **Hesaplayıcı:** [NASA Ejection Charge Calculator](https://www.nakka-rocketry.net/eject.html) kullanın.
-*   **UYARI:** Mutlaka yer testi (Ground Test) yapın!
+## 3. Piroteknik Sistemler (Ejection)
 
-## 4. Shear Pins (Kesme Pimleri)
-Burnun erken açılmasını (Drag Separation) engellemek için naylon vidalar kullanılır. Barut patlayınca bu vidalar kesilir.
-*   **2-56 Nylon Screw:** Genelde 3-4 adet yeterlidir.
+### 3.1. Karabarut (Black Powder FFFFg)
+Standart ayırma patlayıcısıdır.
+*   **Hesaplama (İdeal Gaz Yasası Türevi):**
+    $$ Grams = \frac{P \times V}{R \times T} $$
+    *   NASA'nın basitleştirilmiş formülü pratikte daha güvenlidir.
+*   **Yedekleme (Redundancy):** IREC kuralı gereği **2 adet** e-match (fünye) ve **2 ayrı** barut haznesi olmak zorundadır.
+    *   **Primary Charge:** Hesaplananın %100'ü. (Apogee'de ateşlenir).
+    *   **Backup Charge:** Hesaplananın %125'i. (Apogee + 1 saniye sonra ateşlenir).
+
+### 3.2. CO2 Ejection (Alternatif)
+Yüksek irtifada (30k) karabarut oksijensizlikten bazen yanmayabilir veya çok basınçlı tüplerde (vakum etkisi) yetersiz kalabilir.
+*   **Sistem:** Sıkıştırılmış CO2 tüpünü mekanik bir iğne ile delerek patlatma.
+*   **Avantaj:** Çok temizdir (yanık artığı bırakmaz), irtifadan bağımsızdır.
+*   **Dezavantaj:** Pahalıdır ve tek kullanımlıktır.
+
+## 4. Test Prosedürleri (Ground Testing)
+*   **Ejection Test:** Roket yerde tam montajlıyken barut patlatılır.
+*   **Başarı Kriteri:**
+    1.  Burun konisi veya gövde ayrılmalı.
+    2.  Şok kordonu tam gerilmeli.
+    3.  Paraşüt dışarı çıkmalı.
+    4.  shear pins (pimler) temiz bir şekilde kesilmeli.

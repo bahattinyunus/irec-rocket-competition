@@ -1,5 +1,7 @@
 # 📂 04_Subsystems (Alt Sistemler)
 
+![Banner](../../assets/banner.png)
+
 ## Amaç
 Her bir ana alt sistem için detaylı tasarım ve analiz belgeleri.
 

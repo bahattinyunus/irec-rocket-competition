@@ -1,124 +1,175 @@
-# 🚀 PROXIMA GÖREVİ | Spaceport America Cup Bilgi Bankası
+# 🚀 PROXIMA GÖREVİ | Spaceport America Cup Teknik Bilgi Bankası
 
-![Banner](https://img.shields.io/badge/Görev-PROXIMA-orange?style=for-the-badge) ![Yarışma](https://img.shields.io/badge/Yarışma-Spaceport_America_Cup-blue?style=for-the-badge) ![Konum](https://img.shields.io/badge/Fırlatma_Sahası-New_Mexico_ABD-red?style=for-the-badge) ![Durum](https://img.shields.io/badge/Durum-Bilgi_Bankası_Aktif-green?style=for-the-badge)
+![Banner](docs/assets/banner.png)
+
+![Badges](https://img.shields.io/badge/Görev-PROXIMA-orange?style=for-the-badge) ![Yarışma](https://img.shields.io/badge/Yarışma-Spaceport_America_Cup-blue?style=for-the-badge) ![Konum](https://img.shields.io/badge/Fırlatma_Sahası-New_Mexico_ABD-red?style=for-the-badge) ![Durum](https://img.shields.io/badge/Durum-Bilgi_Bankası_Aktif-green?style=for-the-badge)
 
 > [!IMPORTANT]
-> **BU REPO SADECE BİLGİ VE DÖKÜMANTASYON İÇERİR.**
-> Burası takımın "Beyni"dir. Kodlar ve simülasyon dosyaları güvenlik gerekçesiyle ayrı repoda tutulur.
+> **MÜHENDİSLİK DİSİPLİNİ UYARISI:**
+> Bu repo, sadece roket "yapanlar" için değil, roket "mühendisliği" yapanlar içindir.
+> Kodlar ve simülasyon çıktıları ayrı depolanır. Burası **Know-How** merkezidir.
+
+```text
+--------------------------------------------------------------------------------
+| MISSION CONTROL STATUS   | [ONLINE]  | SYSTEM TIME: T-MINUS 180 DAYS         |
+--------------------------------------------------------------------------------
+| PROPULSION : [NOMINAL]   | AVIONICS  : [STANDBY]  | STRUCTURES : [GO]        |
+| RECOVERY   : [CHECKING]  | PAYLOAD   : [DESIGN]   | WEATHER    : [CLEAR]     |
+--------------------------------------------------------------------------------
+| LATEST TELEMETRY: Apogee Target Locked @ 10,000 ft AGL / Max Vel: Mach 0.85  |
+--------------------------------------------------------------------------------
+```
 
 ---
 
 ## 📚 İçindekiler (Table of Contents)
 1.  [Görev Tanımı](#-görev-tanımı)
-2.  [Spaceport America Cup: Derinlemesine Bakış](#-spaceport-america-cup-derinlemesine-bakış)
-3.  [Jüri Puanlama Sırları](#-jüri-puanlama-sırları)
-4.  [Ders Alınmış Başarısızlıklar (Learning from Failure)](#-ders-alınmış-başarısızlıklar-learning-from-failure)
-5.  [Sahada Yaşam Rehberi: Isı, Toz ve Yılanlar](#-sahada-yaşam-rehberi-ısı-toz-ve-yılanlar)
-6.  [Bilgi Portalı & Alt Sistemler](#-bilgi-portalı--alt-sistemler)
-7.  [Spaceport Yol Haritası](#-spaceport-yol-haritası)
+2.  [Gelecek Vizyonu (Roadmap)](#-gelecek-vizyonu-roadmap)
+3.  [Sistem Mühendisliği Yaklaşımı (V-Model)](#-sistem-mühendisliği-v-modeli-yaklaşımı)
+3.  [Uçuş Dinamiği ve Monte Carlo Analizleri](#-uçuş-dinamiği-ve-monte-carlo-analizleri)
+4.  [Spaceport America Cup: Derinlemesine Bakış](#-spaceport-america-cup-derinlemesine-bakış)
+5.  [Yazılım Mimarisi (Safety Critical)](#-yazılım-mimarisi-safety-critical)
+6.  [Launch Day Ops: Saat Saat Operasyon](#-launch-day-ops-saat-saat-operasyon)
+7.  [Sahada Yaşam Rehberi: Isı, Toz ve Yılanlar](#-sahada-yaşam-rehberi-ısı-toz-ve-yılanlar)
+8.  [Alt Sistemler ve Bilgi Portalı](#-alt-sistemler-ve-bilgi-portalı)
+
+---
+
+## 🚀 Launch Day Ops: Saat Saat Operasyon
+Fırlatma günü kaos değil, sanattır. İşte operasyon planımız:
+
+```mermaid
+timeline
+    title L-0 Launch Day Timeline
+    05:00 : Uyanış & Kahvaltı (Bol Su!)
+          : Rampa Alanına Hareket
+    06:00 : Pad Setup & Rail Alignment
+          : Motor Montajı (On-site Assembly)
+    08:00 : LCO (Launch Control Officer) Check-in
+          : Aviyonik Power-Up & Ses Testi
+    09:00 : Roketin Rampaya Yüklenmesi
+          : Continuity Check (Ateşleyici Testi)
+    10:00 : GO FOR LAUNCH! 🚀
+    10:15 : Kurtarma Ekibi Hareketi (Recovery Tracking)
+    12:00 : Roket İncelemesi & Veri İndirme (Post-Flight)
+```
 
 ---
 
 ## 🌌 Görev Tanımı
-**KTU Gökçen Roket Takımı**, Spaceport America Cup için geliştirdiği roketin tüm teknik birikimini, tasarım kararlarını ve mühendislik hesaplarını burada dökümante eder. Hedefimiz sadece uçmak değil, **mühendislik disiplini** ile uluslararası standartlarda bir sistem ortaya koymaktır.
+**KTU Gökçen Roket Takımı**, Spaceport America Cup için **sistem güvenilirliği (reliability)** ve **uçuş kesinliği (precision)** odaklı bir mühendislik kültürü benimser. "Deneme-Yanılma" değil, "Analiz Et-Simüle Et-Doğrula" (Analyze-Simulate-Verify) prensibiyle çalışırız.
 
 ---
 
-## 🏜️ Spaceport America Cup: Derinlemesine Bakış (Deep Dive)
-
-### Tarihçe ve Önem
-2003 yılında kurulan **ESRA (Experimental Sounding Rocket Association)** tarafından düzenlenen bu yarışma, 2006'daki ilk IREC'ten bu yana dünyanın en prestijli roketçilik etkinliğine dönüşmüştür. 2017'den itibaren New Mexico'daki **Spaceport America** (Virgin Galactic'in evi) tesislerinde yapılmaktadır. 2025 itibariyle Teksas Spaceport Midland'a geçiş süreçleri başlamıştır.
-
-### Yarışma Kategorileri
-Yarışma sadece "en yükseğe çıkmak" değildir. Aşağıdaki 6 ana kategori mevcuttur:
-*   **10k COTS:** 10,000 ft hedef, Hazır motor. (En kalabalık, giriş seviyesi).
-*   **10k SRAD:** 10,000 ft hedef, Öğrenci yapımı motor.
-*   **30k COTS:** 30,000 ft hedef, Hazır motor.
-*   **30k SRAD:** 30,000 ft hedef, Öğrenci yapımı motor. (En prestijli kategorilerden biri).
-*   **10k/30k SRAD Hybrid/Liquid:** Hibrit ve sıvı yakıtlı motorlar için özel kategoriler.
+## �️ Gelecek Vizyonu (Roadmap)
+Bu takım nereye gidiyor? 2025 ve ötesi için planlarımız:
+*   [Yol Haritasını Görüntüle (ROADMAP.md)](ROADMAP.md)
+*   **Q1 2025:** PDR Tamamlanması & Avionics Bench Testleri.
+*   **Q2 2025:** SRAD Hibrit Motor Statik Ateşleme.
+*   **Q2 2026:** Spaceport America Cup 30k Atışı.
 
 ---
 
-## ⚖️ Jüri Puanlama Sırları (Scoring Secrets)
-Toplam 1000 puan üzerinden değerlendirilirsiniz. İşte "altın vuruş" yapabileceğiniz noktalar:
-
-### 1. Teknik Rapor (400 Puan - %40)
-*   En büyük puan kaynağı. Uçuşunuz mükemmel olsa bile raporunuz zayıfsa kazanamazsınız.
-*   **AIAA Formatı:** Kesinlikle uyulmalıdır (Yazı tipi, kenar boşlukları, atıflar).
-*   **Risk Analizi:** Raporun en çok incelenen kısmıdır. "Ne olursa ne yaparız?" sorusunun cevabı.
-
-### 2. Tasarım & Uygulama (240 Puan - %24)
-*   **Poster Sunumu:** Jüri, roketin kendisine değil, sizin onu ne kadar iyi tanıdığınıza bakar.
-*   **SRAD Puanları:** Hazır parça yerine kendi tasarımınızı kullanmak (eğer çalışırsa!) ekstra puan getirir.
-
-### 3. Uçuş Performansı (500 Puan Başlangıç)
-*   **İrtifa Puanı:** Hedef irtifadan her %1 sapma puan kaybettirir. (9,900 ft, 10,100 ft'ten iyidir).
-*   **Kurtarma:** Roket tek parça (veya planlandığı gibi ayrılmış) ve tekrar uçabilir halde inmelidir.
-
-### 🚫 Cezalar (Penalties)
-*   **Faydalı Yük İhlali (-100 Puan):** Min. 8.8 lbs (4 kg) kuralı kutsaldır. 1 gram eksik olursa 100 puan silinir.
-*   **Güvenlik İhlali (-20 Puan):** Launch rail yanında baretsiz dolaşmak, checklist kullanmamak.
-
----
-
-## 💥 Ders Alınmış Başarısızlıklar (Common Failure Modes)
-Geçmiş yıllarda takımların %40'ı çeşitli sebeplerle diskalifiye olmuş veya başarısız olmuştur.
-
-1.  **Erken Ayrılma (Drag Separation):** Roket ses hızını aşarken oluşan hava direnci, burun konisini vakum etkisiyle çeker. **Shear pins (kesme pimleri)** yeterli değilse paraşüt ses hızında açılır ve roket parçalanır.
-2.  **Motor Patlaması (CATO):** Özellikle SRAD motorlarda, grain döküm hataları (hava kabarcığı) yanma yüzeyini aniden artırarak motoru bombaya çevirir.
-3.  **Avionik Resetlenmesi:** Yüksek G kuvvetinde pillerin yerinden oynaması. **Çözüm:** Pilleri lehimleyin veya çok sıkı sabitleyin. Asla yaylı pil yuvası kullanmayın!
-4.  **Nozzle Blowout:** Grafit kalitesizse veya segman (snap ring) tam oturmadıysa, nozzle fırlatma anında uçar gider.
-
----
-
-## 🌵 Sahada Yaşam Rehberi: Isı, Toz ve Yılanlar
-
-New Mexico çölü affetmez. Yarışma, hayatta kalma mücadelesidir.
-
-*   **Hidrasyon:** Günde kişi başı **3-4 Galon (12-15 Litre)** su içmelisiniz. Tıbbi ekip en çok susuzluk vakalarına bakar.
-*   **Giyim:** Şort giymeyin! Çöl dikenleri ve güneş yanığı için uzun, hafif, UV korumalı pantolon ve uzun kollu tişört şarttır. Geniş kenarlı şapka zorunludur.
-*   **Vahşi Yaşam:** Çıngıraklı yılanlar (Rattlesnakes) ve akrepler sahanın gerçek sahipleridir. Asla taşların altına elinizi sokmayın.
-*   **Toz Fırtınaları:** İnce çöl tozu (Moon dust) her yere girer. Elektroniklerinizi ve motorunuzu streç filmle koruyun.
-
----
-
-## 📚 Bilgi Portalı & Alt Sistemler
-
-### 🛠️ Alt Sistem Mühendisliği
-| Sistem | İçerik | Link |
-| :--- | :--- | :--- |
-| **🚀 İtki (Propulsion)** | Motor seçimi, Hibrit motor teorisi, Üretim checklistleri. | [▶️ İncele](docs/04_Subsystems_&_Payload/01_Propulsion/README.md) |
-| **📟 Aviyonik (Avionics)** | PCB tasarım kuralları, sensör (BOM) listesi, RF link bütçesi. | [▶️ İncele](docs/04_Subsystems_&_Payload/02_Avionics/README.md) |
-| **🏗️ Yapısal (Structures)** | Karbon fiber vs Fiberglass, Fin flutter analizi. | [▶️ İncele](docs/04_Subsystems_&_Payload/03_Aerostructures/README.md) |
-| **🪂 Kurtarma (Recovery)** | Paraşüt boyutlandırma, Barut (Black powder) hesapları. | [▶️ İncele](docs/04_Subsystems_&_Payload/04_Recovery/README.md) |
-
-### 📂 Proje Yönetimi
-*   **[Yarışma Rehberi (Anayasa)](docs/00_Competition_Guide/README.md)**
-*   **[PDR Şablonu](docs/01_Milestones_&_Updates/PDR_Template.md)**
-*   **[Teknik Rapor Şablonu](docs/02_Technical_Report/Technical_Report_Template.md)**
-
----
-
-## 📅 Spaceport Yol Haritası
+## �📐 Sistem Mühendisliği: "V-Modeli" Yaklaşımı
+Gökçen Takımı, NASA standartlarında "V-Model" yaşam döngüsünü uygular.
 
 ```mermaid
-gantt
-    title IREC 2026 Süreci
-    dateFormat  YYYY-MM-DD
-    axisFormat  %b %Y
-
-    section Planlama
-    Konsept & Ar-Ge         :active,    des1, 2025-10-01, 30d
-    PDR Teslimi             :           des2, after des1, 45d
-
-    section Üretim & Test
-    Alt Sistem Üretimi      :           dev1, after des2, 90d
-    CDR Teslimi             :           dev2, after dev1, 30d
-    Yer Testleri & FRR      :           tst1, after dev2, 60d
-
-    section Fırlatma
-    Spaceport America Cup   :crit,      launch, 2026-06-15, 7d
+graph TD
+    Req[Gereksinim Tanımı] -->|Decomposition| Arch[Sistem Mimarisi]
+    Arch -->|Decomposition| Des[Alt Sistem Tasarımı]
+    Des -->|Implementation| Dev[Üretim ve Kodlama]
+    Dev -->|Unit Test| Ver1[Birim Testleri]
+    Ver1 -->|Integration Test| Ver2[Sistem Entegrasyonu]
+    Ver2 -->|Validation| Val[Uçuş ve Doğrulama]
 ```
 
+*   **Sol Kol (Tasarım):** "Doğru roketi mi tasarlıyoruz?" (Validation).
+*   **Sağ Kol (Test):** "Roketi doğru mu ürettik?" (Verification).
+*   **Traceability:** Her vida, her kod satırı bir **SRD (System Requirement Document)** maddesine dayanmalıdır. *"Canımız istedi diye parça eklemiyoruz."*
+
 ---
-*KTU Gökçen Roket Takımı - Ad Astra Per Aspera*
+
+## 📈 Uçuş Dinamiği ve Monte Carlo Analizleri
+Roketimiz düz gitmez. Rüzgar, itki sapmaları ve montaj hataları kaotiktir.
+
+### 1. 6-DOF Hareket Denklemleri (Equations of Motion)
+RocketPy veya OpenRocket kullanırken, arka planda şu diferansiyel denklemler çözülür:
+
+**Öteleme (Translation - Newton II):**
+$$ \Sigma \vec{F} = m \frac{d\vec{v}}{dt} = \vec{F}_{thrust} + \vec{F}_{drag} + \vec{F}_{lift} + \vec{F}_{gravity} $$
+
+**Dönme (Rotation - Euler):**
+$$ \Sigma \vec{M} = I \cdot \dot{\vec{\omega}} + \vec{\omega} \times (I \cdot \vec{\omega}) $$
+*   $I$: Eylemsizlik momenti tensörü. (Roket yakıt yaktıkça sürekli değişir!)
+*   $\vec{\omega}$: Açısal hız vektörü.
+
+### 2. Monte Carlo Dispersiyon Analizi
+Tek bir simülasyon yetersizdir. Olasılıksal (Stokastik) analiz için **1000+ Uçuş** simüle edilir.
+*   **Değişkenler:**
+    *   Rüzgar Hızı: $\pm 10$ m/s (Gaussian Distribution)
+    *   Motor İtkisi: $\pm \%5$ (Üretim hatası)
+    *   CD (Sürüklenme Katsayısı): $\pm \%10$
+*   **Çıktı (CEP - Circular Error Probable):** Roketin %95 ihtimalle düşeceği elips alanı. Bu alan, yer ekibinin güvenliği için hayati önem taşır.
+
+---
+
+## � Yazılım Mimarisi (Safety Critical)
+[📝 Detaylı Yazılım Rehberi için Tıklayın](docs/04_Subsystems_&_Payload/02_Avionics/README.md)
+
+Yazılımımız "Patlamayı Önlemek" üzerine kuruludur.
+*   **RTOS (Gerçek Zamanlı İşletim Sistemi):** FreeRTOS kullanarak kritik görevlerin (Apogee algılama) asla gecikmemesi sağlanır.
+*   **Kalman Filtresi:** Sensör verisini (IMU + Barometre) "Sensor Fusion" ile birleştirerek gürültüyü yok ederiz.
+    *   *Basit Ortalama:* Gecikme yaratır (Lag).
+    *   *Kalman:* Geleceği tahmin eder (Predict).
+*   **Watchdog Timer:** İşlemci kilitlenirse 10ms içinde sistemi resetler.
+
+---
+
+## �️ Spaceport America Cup: Derinlemesine Bakış
+*   **10k/30k Kategorileri:** COTS (Hazır Motor) ve SRAD (Kendi Motorumuz) ayrımı.
+*   **Puanlama:** %50 Uçuş (İrtifa doğruluğu), %50 Mühendislik (Rapor kalitesi).
+*   **Cezalar:**
+    *   Faydalı yük (8.8 lbs) 1 gram eksikse: **-100 Puan**.
+    *   Güvenlik ihlali: **Diskalfiye**.
+
+---
+
+## ️ Alt Sistem Mühendisliği (Bilgi Portalı)
+Tüm detaylar ilgili klasörlerde:
+
+| Sistem | İçerik | Link |
+| :--- | :--- | :--- |
+| **🚀 İtki (Propulsion)** | $I_{sp}$ Formülleri, Enjektör $C_d$ hesabı, Statik Test. | [▶️ İncele](docs/04_Subsystems_&_Payload/01_Propulsion/README.md) |
+| **📟 Aviyonik (Avionics)** | RTOS, Kalman, 4-Katmanlı PCB, Link Bütçesi. | [▶️ İncele](docs/04_Subsystems_&_Payload/02_Avionics/README.md) |
+| **🏗️ Yapısal (Structures)** | Barrowman Denklemleri, Fin Flutter, Vakum İnfüzyon. | [▶️ İncele](docs/04_Subsystems_&_Payload/03_Aerostructures/README.md) |
+| **🪂 Kurtarma (Recovery)** | Ejection Charge (Barut) Hesabı, Şok Kordonu Enerjisi. | [▶️ İncele](docs/04_Subsystems_&_Payload/04_Recovery/README.md) |
+
+---
+
+## 📅 Takvim
+```mermaid
+gantt
+    title IREC Süreci
+    dateFormat YYYY-MM-DD
+    section Mühendislik
+    Konsept (V-Model Sol) : active, 2025-10-01, 30d
+    PDR (Ön Tasarım)      : 2025-11-01, 45d
+    CDR (Kritik Tasarım)  : 2026-02-01, 30d
+    section Test & Doğrulama
+    Üretim                : 2026-03-01, 60d
+    Entegrasyon (V-Model Sağ): 2026-05-01, 30d
+    Fırlatma              : crit, 2026-06-15, 7d
+```
+
+
+---
+
+## 🎖️ Görev Rütbeleri (Mission Ranks)
+Bu repoya katkı sağlayanlar, başarılarına göre rütbe kazanır:
+
+| Rozet | Rütbe | Gereksinim |
+| :---: | :--- | :--- |
+| ![Cadet](https://img.shields.io/badge/Rank-Cadet-green) | **Cadet** | İlk PR'ını (Issue veya Typo fix) gönderenler. |
+| ![Specialist](https://img.shields.io/badge/Rank-Specialist-blue) | **Mission Specialist** | Bir alt sistemin (docs/) teknik rehberini tamamlayanlar. |
+| ![Flight Director](https://img.shields.io/badge/Rank-Flight_Director-red) | **Flight Director** | Kritik mühendislik hesaplarını (Monte Carlo, CFD) yapanlar. |
+| ![Legend](https://img.shields.io/badge/Rank-Legend-gold) | **Legend** | Roketi Spaceport America'da başarıyla uçuran çekirdek ekip. |

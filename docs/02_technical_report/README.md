@@ -1,5 +1,7 @@
 # 📂 02_Technical_Report (Teknik Rapor)
 
+![Banner](../../assets/banner.png)
+
 ## 🏆 Kutsal Kase (Holy Grail)
 Bu rapor, yarışmadaki başarımızın **%50'sini** oluşturur. Roketimiz ne kadar iyi uçarsa uçsun, bu rapor kötüyse kazanamayız.
 

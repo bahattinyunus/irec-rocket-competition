@@ -1,5 +1,7 @@
 # 📂 03_Safety_and_Operations (Güvenlik ve Operasyonlar)
 
+![Banner](../../assets/banner.png)
+
 ## Amaç
 Spaceport America Cup'ta güvenlik 1 numaralı önceliktir. Bu klasör, Fırlatma Rayı için gerekli tüm kontrol listelerini içerir.
 
