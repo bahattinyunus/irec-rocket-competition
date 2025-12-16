@@ -2,7 +2,7 @@
   <img src="assets/project_banner.png" alt="Gökçen Roket Takımı Banner" width="100%" />
   <br><br>
   <img src="assets/university_logo.png" alt="Üniversite Logosu" width="80" />
-  <img src="assets/teknofest_logo.png" alt="IREC Logosu" width="80" />
+  <img src="assets/irec_logo.png" alt="IREC Logosu" width="80" />
 
   # 📋 Spaceport America Cup (IREC) 2026 - Proje Dokümantasyonu
   ### Karadeniz Teknik Üniversitesi - Gökçen Roket Takımı
