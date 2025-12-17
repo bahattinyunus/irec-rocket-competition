@@ -1,163 +1,144 @@
-# 🦅 PROXIMA: THE IREC CODEX | KTU GÖKÇEN
+# 🚀 KTU GÖKÇEN: PROXIMA MISSION REPOSITORY
 
 ![Banner](docs/assets/banner.png)
 
-> **"Vasatlık İhanettir."**
-> Spaceport America Cup (IREC) bir öğrenci kulübü etkinliği değildir. Burası, mühendisliğin **Olimpiyatlarıdır**. Ya mükemmel olursunuz ya da çöle çakılırsınız.
+> **"Mükemmellik bir eylem değil, bir alışkanlıktır."**
+> Bu depo, KTÜ Gökçen Roket Takımı'nın Spaceport America Cup (IREC) 30k SRAD kategorisi için geliştirdiği "Proxima" roketinin teknik dokümantasyonunu ve mühendislik araçlarını içerir.
 
 <div align="center">
 
-![Badge](https://img.shields.io/badge/MISSION-PROXIMA-red?style=for-the-badge) ![Badge](https://img.shields.io/badge/STATUS-FLIGHT_READY-success?style=for-the-badge) ![Badge](https://img.shields.io/badge/TARGET-30%2C000_FT_AGL-blue?style=for-the-badge)
+![Badge](https://img.shields.io/badge/MISSION-PROXIMA-red?style=for-the-badge) ![Badge](https://img.shields.io/badge/STATUS-FLIGHT_READY-success?style=for-the-badge) ![Badge](https://img.shields.io/badge/CATEGORY-30k_SRAD-blue?style=for-the-badge)
 
-[**📜 MANİFESTO**](ROADMAP.md) • [**📚 KAYNAKLAR**](docs/RESOURCES.md) • [**📖 SÖZLÜK**](docs/GLOSSARY.md) • [**🧪 MALZEME**](docs/04_Subsystems_&_Payload/03_Aerostructures/Material_Properties.md) • [**📋 CHECKLISTS**](docs/03_Safety_&_SRAD/Checklists/) • [**🛡️ SAVAŞ KURALLARI**](CONTRIBUTING.md)
+[**📜 YOL HARİTASI**](ROADMAP.md) • [**📚 KAYNAKLAR**](docs/RESOURCES.md) • [**📖 SÖZLÜK**](docs/GLOSSARY.md) • [**🧪 MALZEME**](docs/04_Subsystems_&_Payload/03_Aerostructures/Material_Properties.md) • [**📋 PROSEDÜRLER**](docs/03_Safety_&_SRAD/Checklists/)
 
 </div>
 
 ---
 
-## ⚡ 0. MÜHENDİSLİK YEMİNİ (The Code)
-Bu projeye adım atan herkes şu değişmez yasaları kabul eder:
-1.  **Veri > Ego:** "Bence böyle olur" cümlesi yasaktır. "Simülasyon sonucu bu" cümlesi geçerlidir.
-2.  **Fizik Affetmez:** Bir vida gevşekse, 10,000 feet'te o vida kopar. Roketiniz milyon dolarlık bir hurdaya döner.
-3.  **Yazılmamışsa, Yapılmamıştır:** Testi video ile, tasarımı rapor ile kanıtlamazsanız, o işi yapmamış sayılırsınız.
-4.  **Murphy Kanunu:** Ters gidebilecek her şey, en kötü zamanda (Fırlatma Anında) ters gider. Yedekleyin (Redundancy).
+## 📋 1. PROJE VE GÖREV TANIMI (Mission Definition)
+**Proje Adı:** Proxima
+**Yarışma:** Spaceport America Cup (IREC)
+**Konum:** New Mexico, ABD
+**Hedef:** 4 kg (8.8 lb) bilimsel faydalı yükü 30,000 ft irtifaya taşımak ve güvenli bir şekilde kurtarmak.
+
+### 🏆 Yarışma Kategorisi: 30k SRAD
+Takımımız, yarışmanın en zorlu ve prestijli kategorisi olan **30,000 ft - Student Researched and Developed (SRAD)** kategorisinde yarışmaktadır.
+
+| Parametre | Değer | Açıklama |
+| :--- | :--- | :--- |
+| **Hedef İrtifa** | 30,000 ft (AGL) | Yaklaşık 9,144 metre. |
+| **Motor Tipi** | SRAD (Öğrenci Yapımı) | Hibrit veya Katı Yakıtlı motor tasarımı ve üretimi tamamen takıma aittir. |
+| **Faydalı Yük** | 4 kg (Min) | 3U CubeSat form faktöründe bilimsel deney. |
 
 ---
 
-## 🏛️ 1. MİSYON VE OPERASYON ALANI
-**Konum:** Spaceport America, New Mexico. **Düşman:** $Ma \approx 1.0$ şok dalgaları ve 45°C çöl sıcağı.
-**Hedef:** 8.8 lb (4 kg) bilimsel faydalı yükü tam 30,000 ft irtifaya çıkarmak ve *tek parça* geri indirmek.
+## 📂 2. DOKÜMANTASYON VE NAVİGASYON REHBERİ
+Bu repo, binlerce satır kod ve teknik dokümandan oluşur. Aradığınızı bulmanız için rehber:
 
-### 🏆 Yarışma Kategorileri (The Categories)
-Spaceport America Cup (IREC), iki ana irtifa ve iki ana itki kategorisine ayrılır. Bizim hedefimiz **30k SRAD**:
+| Belge | Fragman (İçerik Özeti) | Erişim |
+| :--- | :--- | :--- |
+| **📜 YOL HARİTASI** | Projenin 2 yıllık stratejik "Master Planı". Hangi aşamadayız, sırada ne var? | [👉 Detaylar](ROADMAP.md) |
+| **📚 KAYNAKLAR** | "Nasıl Kazanılır?" IREC şampiyonlarının raporları, kritik kitaplar ve eğitim videoları. | [👉 Kütüphaneye Git](docs/RESOURCES.md) |
+| **📖 SÖZLÜK** | CATO, Apogee, SRAD ne demek? Roketçilik terminolojisine hakim olun. | [👉 Öğren](docs/GLOSSARY.md) |
+| **🧪 MALZEME VERİSİ** | Analizler için gerekli gerçek "Engineering Data". (Alüminyum 6061, Karbon Fiber vb.) | [👉 Verileri Al](docs/04_Subsystems_&_Payload/03_Aerostructures/Material_Properties.md) |
+| **📋 PROSEDÜRLER** | Roketi patlatmadan uçurmak için: Montaj, Rampa ve Kurtarma adım adım kontrol listeleri. | [👉 Uygula](docs/03_Safety_&_SRAD/Checklists/) |
+| **🛡️ SAVAŞ KURALLARI** | Repoya kod gönderirken uymanız gereken disiplin kuralları. | [👉 Oku](CONTRIBUTING.md) |
 
-| Kategori | İrtifa Hedefi | Motor Tipi | Açıklama |
-| :--- | :--- | :--- | :--- |
-| **10k COTS** | 10,000 ft AGL | Commercial (Hazır) | Başlangıç seviyesi. Hazır motor (Cesaroni, AeroTech) kullanılır. |
-| **10k SRAD** | 10,000 ft AGL | Student R&D (Öğrenci) | Motoru öğrenciler tasarlar ve üretir. |
-| **30k COTS** | 30,000 ft AGL | Commercial (Hazır) | Yüksek irtifa, ancak hazır motor güvenilirliği. |
-| **30k SRAD** | 30,000 ft AGL | Student R&D (Öğrenci) | **En prestijli kategori.** Hem motor hem gövde öğrenci tasarımıdır. *Biz buradayız.* |
+---
 
-### 📐 Sistem Mimarisi (Architecture)
-Bu roket tek bir vücut gibi çalışır. Alt sistemlerin etkileşimi:
+## ⚖️ 3. MÜHENDİSLİK İLKELERİ (Core Principles)
+Bu proje, havacılık ve uzay endüstrisi standartlarına (NASA/ESA) uygun olarak yürütülmektedir.
 
+1.  **Veri Odaklı Karar Alma:** Tüm tasarım kararları; simülasyon, analiz ve test verilerine dayanır. "Tahmin" değil, "Doğrulama" esastır.
+2.  **Önce Güvenlik (Safety First):** Havacılık kuralları tavizsiz uygulanır. Kritik sistemlerde yedeklilik (redundancy) zorunludur.
+3.  **Dokümantasyon:** Yapılan her test, tasarım ve analiz yazılı olarak kayıt altına alınır. İzlenebilirlik (Traceability) esastır.
+4.  **Risk Yönetimi:** Olası tüm hata senaryoları önceden analiz edilir (FMEA) ve önleyici tedbirler alınır.
+
+---
+
+## 📐 3. SİSTEM MİMARİSİ VE METODOLOJİ
+Proje, **Design-Build-Fly** döngüsü ve **V-Model** sistem mühendisliği yaklaşımı ile yönetilir.
+
+### Alt Sistem Etkileşim Şeması
 ```mermaid
 graph TD
     subgraph "🚀 FLIGHT VEHICLE"
-        Avionics[🧠 AVİYONİK: Flight Computer]
+        Avionics[🧠 AVİYONİK: Uçuş Bilgisayarı]
         Prop[🔥 İTKİ: SRAD Motor]
-        Aero[🏗️ YAPISAL: Gövde & Finler]
-        Rec[🪂 KURTARMA: Paraşütler]
+        Aero[🏗️ YAPISAL: Gövde ve Kanatçıklar]
+        Rec[🪂 KURTARMA: Paraşüt Sistemi]
     end
 
-    Avionics -->|Ignition Signal| Prop
-    Prop -->|Thrust Force| Aero
-    Avionics -->|Deploy Signal| Rec
-    Rec -->|Drag Force| Aero
-    Aero -->|Vibration Data| Avionics
+    Avionics -->|Ateşleme Sinyali| Prop
+    Prop -->|İtki Kuvveti| Aero
+    Avionics -->|Ayrılma Sinyali| Rec
+    Rec -->|Sürüklenme Kuvveti| Aero
+    Aero -->|Titreşim Verisi| Avionics
 ```
 
----
-
-## 🧬 2. MÜHENDİSLİK FELSEFESİ (Design-Build-Fly)
-Biz bir "Teknoloji Kulübü" değiliz. Biz bir **Ar-Ge Organizasyonuyuz**.
-
-### 1️⃣ Design (Tasarım)
-*   **CAD:** SolidWorks (Mekanik) ve Altium (PCB) tasarımı bitmeden vida sıkılmaz.
-*   **Simülasyon:** OpenRocket (Subsonic) ve RASAero (Supersonic) simülasyonları %95 doğrulukla yapılmalıdır.
-*   **Review:** PDR (Preliminary Design Review) ve CDR (Critical Design Review) geçmeden üretime başlanmaz.
-
-### 2️⃣ Build (Üretim)
-*   **CNC & Torna:** Parçalar mikron hassasiyetinde işlenir.
-*   **Kompozit:** Karbon fiber sarımı (Filament Winding) vakum altında kürlenir.
-*   **Test:** Statik ateşleme testi (Static Fire) yapılmamış bir motor asla rokete takılmaz.
-
-### 3️⃣ Fly (Uçuş)
-*   **Checklist:** 50 maddelik kontrol listesi, pilotun kutsal kitabıdır.
-*   **Analiz:** Uçuş sonrası SD kart verileri `analysis/` klasöründe Python ile işlenir ve simülasyonla karşılaştırılır.
+### Geliştirme Süreci
+*   **Tasarım (Design):** SolidWorks (CAD), OpenRocket/RASAero (Simülasyon), Altium (PCB).
+*   **Üretim (Build):** Kompozit sarım (Filament Winding), CNC işleme, 3D baskı (PETG/Nylon).
+*   **Test & Uçuş (Fly):** Statik Ateşleme Testleri, HIL (Hardware-in-the-Loop) simülasyonları, Test uçuşları.
 
 ---
 
-## 💻 3. DIGITAL TOOLBELT (Araç Kutusu)
-"Hesap makinesi kullanmayan mühendis, şairdir." Biz şair değiliz. Repoda gömülü Python araçlarını kullanın.
+## �️ 4. DİJİTAL MÜHENDİSLİK ARAÇLARI (Engineering Tools)
+Proje kapsamında geliştirilen özel Python analiz araçları `analysis/` dizininde bulunmaktadır.
 
-### 🛠️ Kurulum (Installation)
-Tek komutla tüm mühendislik araçlarını kurun:
+**Kurulum:**
 ```bash
 pip install -e .
-pip install -r requirements.txt
 ```
 
-### 🧮 Araçlar Nasıl Kullanılır?
-| Araç | Komut | Ne Yapar? |
+**Araç Listesi:**
+| Araç | Açıklama | Komut |
 | :--- | :--- | :--- |
-| **Paraşüt Boyutlandırma** | `python analysis/calculators/parachute_sizing.py` | Kütleye göre paraşüt çapını ve çarpma enerjisini (Joule) hesaplar. |
-| **Link Budget (RF)** | `python analysis/calculators/link_budget.py` | Anten gücüne göre telemetri menzilini ve sinyal kalitesini ölçer. |
-| **Thrust Analyzer** | `python analysis/calculators/thrust_analyzer.py` | Motor verisini (.eng) analiz edip grafiğini çizer. |
+| **Parachute Sizing** | İniş hızı ve darbe enerjisi hesabı. | `python analysis/calculators/parachute_sizing.py` |
+| **Link Budget** | RF Telemetri menzil analizi (Friis). | `python analysis/calculators/link_budget.py` |
+| **Thrust Analyzer** | Motor test verisi analizi. | `python analysis/calculators/thrust_analyzer.py` |
 
 ---
 
-## 💀 3. FAILURE MODES (Neden Çakılacağız?)
-Roketler bu yüzden düşer. Ezberleyin.
+## ⚠️ 5. RİSK ANALİZİ VE TEKNİK ZORLUKLAR
+Projenin başarısı için aşağıdaki teknik riskler dikkatle yönetilmelidir:
 
 <details>
-<summary>🚨 <b>Kritik Hata Senaryolarını Görüntüle</b> (Tıklayın)</summary>
+<summary>� <b>Detaylı Risk Analizini Görüntüle</b> (Tıklayın)</summary>
 
-### 🚩 Yapısal İflas (Structural Failure)
-*   **Fin Flutter:** Kanatçıklar ses hızına yaklaşırken rezonansa girer ve kopar. *Çözüm: Karbon fiber + Modal Analiz.*
-*   **Gövde Burkulması:** İtki kuvveti gövdeyi ezer. *Çözüm: Filament Winding.*
+### 🚩 Yapısal Bütünlük (Structural Integrity)
+*   **Fin Flutter:** Transonik hızlarda kanatçık rezonansı. *Çözüm: Yüksek modüllü karbon fiber kullanımı ve ANSYS modal analiz.*
+*   **Gövde Burkulması:** Yüksek itki altında gövde deformasyonu. *Çözüm: Filament winding tekniği.*
 
-### 🚩 Aviyonik Kâbuslar
-*   **RF Blackout:** GPS sinyali karbon fiberden çıkamaz. *Çözüm: Fiberglas burun konisi.*
-*   **Pil Patlaması:** LiPo piller vakumda şişer. *Çözüm: Vakum testi yapılmış Li-Ion pil.*
+### 🚩 Aviyonik Sistemler
+*   **RF İletişim Kaybı:** Karbon fiber gövdenin sinyali bloke etmesi. *Çözüm: RF şeffaf burun konisi ve harici anten yerleşimi.*
+*   **Pil Güvenliği:** Vakum ortamında Li-Po pil şişmesi. *Çözüm: Basınç testli Li-Ion piller.*
 
-### 🚩 İtki Sürprizleri (CATO)
-*   **Nozzle Erozyonu:** Grafit nozzle erirse itki düşer. *Çözüm: Yüksek yoğunluklu grafit.*
+### 🚩 İtki Sistemi
+*   **Termal Erozyon:** Nozzle boğazının erimesi. *Çözüm: Yüksek yoğunluklu grafit malzeme.*
 
 </details>
 
 ---
 
-## �️ 4. REPO HARİTASI (Directory Map)
-Kaybolmayın. Bilgi burada:
+## 📚 6. REFERANSLAR VE KAYNAKLAR
+Teknik literatür, geçmiş yıl raporları ve standartlar için kütüphanemizi ziyaret edin:
 
-```text
-📂 ktu-rocket-irec/
-├── 📂 analysis/                  # 🧠 BEYİN: Simülasyon ve Hesaplamalar
-│   ├── 📂 calculators/           #    -> Python Araçları (Link, Paraşüt, İtki)
-│   └── setup.py                  #    -> Kurulum dosyası
-├── � docs/                      # 📚 KÜTÜPHANE: Dökümantasyon
-│   ├── � 00_admin/              #    -> Bütçe, Organizasyon Şeması
-│   ├── 📂 03_Safety_&_SRAD/      #    -> 🛡️ Risk Matrisi ve CHECKLISTLER
-│   │   └── 📂 Checklists/        #       -> [Assembly] [Launch] [Recovery]
-│   ├── 📂 04_Subsystems_/        #    -> 🔧 Teknik Tasarım Cetvelleri
-│   ├── GLOSSARY.md               #    -> Sözlük (Apogee, CATO nedir?)
-│   └── ...
-├── 📜 ROADMAP.md                 # �️ Gelecek Planı
-├── 📜 CONTRIBUTING.md            # 🤝 Katkı Kuralları
-└── 📜 LICENSE                    # ⚖️ MIT Lisansı
-```
+**� [TÜM KAYNAKLARA GİT (RESOURCES.md)](docs/RESOURCES.md)**
+
+*   **Raporlar:** McGill, Waterloo, Stanford teknik raporları.
+*   **Kitaplar:** *Rocket Propulsion Elements* (Sutton), *Modern High Power Rocketry*.
+*   **Yazılımlar:** OpenRocket, RASAero, BurnSim.
 
 ---
 
-## 🚀 5. OPERASYON: LAUNCH DAY
-O gün geldiğinde panik yapmayın. **[Checklistleri](docs/03_Safety_&_SRAD/Checklists/)** kullanın.
+## 📞 İLETİŞİM
+Kurumsal iletişim ve sponsorluk için:
 
-| Saat (T-) | Event | Kritik Kontrol |
-| :--- | :--- | :--- |
-| **05:00** | 🌅 **Deployment** | 4L Su İç (Dehidrasyon = Hata). |
-| **08:00** | 👮 **LCO Check** | Radyo Frekans Çakışması Kontrolü. |
-| **09:15** | 💣 **Continuity** | Ateşleyici direnci < 50 Ohm olmalı. |
-| **10:00** | 🔥 **IGNITION** | *Ad Astra Per Aspera.* |
+*   🌐 **Web:** [gokcenrocket.org](https://gokcenrocket.org)
+*   📧 **E-Posta:** contact@gokcenrocket.org
+*   💼 **LinkedIn:** [linkedin.com/company/ktugokcen](https://linkedin.com/company/ktugokcen)
 
 ---
-
-## 📞 İLETİŞİM (Intel)
-*   🌐 **HQ:** [gokcenrocket.org](https://gokcenrocket.org)
-*   📧 **Secure Line:** contact@gokcenrocket.org
-
-> *"Gelecek Göklerdedir."* - M.K. Atatürk
-
----
-### ⚖️ Yasal Uyarı (Legal & Compliance)
-*   **ITAR/EAR:** Bu proje ABD İhracat Kontrol Yasalarına tabi teknolojiler içerebilir. Paylaşırken dikkatli olun.
+### ⚖️ Yasal Uyarı (Disclaimer)
+Bu depo, akademik ve eğitim amaçlıdır. İçerikteki bazı teknolojiler (özellikle itki ve navigasyon sistemleri), uluslararası ihracat kontrol düzenlemelerine (EAR/ITAR) tabi olabilir. Kullanıcılar, yerel ve uluslararası yasalara uymakla yükümlüdür.
