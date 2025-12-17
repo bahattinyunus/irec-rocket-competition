@@ -39,21 +39,22 @@
 ## 🚀 Launch Day Ops: Saat Saat Operasyon
 Fırlatma günü kaos değil, sanattır. İşte operasyon planımız:
 
-```mermaid
-timeline
-    title L-0 Launch Day Timeline
-    05:00 : Uyanış & Kahvaltı (Bol Su!)
-          : Rampa Alanına Hareket
-    06:00 : Pad Setup & Rail Alignment
-          : Motor Montajı (On-site Assembly)
-    08:00 : LCO (Launch Control Officer) Check-in
-          : Aviyonik Power-Up & Ses Testi
-    09:00 : Roketin Rampaya Yüklenmesi
-          : Continuity Check (Ateşleyici Testi)
-    10:00 : GO FOR LAUNCH! 🚀
-    10:15 : Kurtarma Ekibi Hareketi (Recovery Tracking)
-    12:00 : Roket İncelemesi & Veri İndirme (Post-Flight)
-```
+## 🚀 Launch Day Ops: Saat Saat Operasyon
+Fırlatma günü kaos değil, sanattır. İşte operasyon planımız:
+
+| Saat (T-Minus) | Operasyon (Event) | Sorumlu | Detay |
+| :--- | :--- | :--- | :--- |
+| **05:00** | 🌅 **Uyanış & Kahvaltı** | Tüm Takım | 4L su içilmesi zorunludur. Hipotermi/Dehidrasyon kontrolü. |
+| **05:30** | 🚗 **Rampaya Hareket** | Lojistik | Ekipmanların araca yüklenmesi. |
+| **06:00** | 🏗️ **Pad Setup** | Yapısal | Fırlatma rayının kurulumu ve açının ayarlanması (84°). |
+| **06:30** | 🧪 **Motor Montajı** | İtki | Motorun (SRAD/COTS) birleştirilmesi ve *bütünlük* kontrolü. |
+| **08:00** | 👮 **LCO Check-in** | Kaptan | Launch Control Officer'a "Hazırız" tekmili ve frekans kontrolü. |
+| **08:30** | 🔌 **Aviyonik Power-Up** | Aviyonik | Bilgisayarların açılması, GPS Lock beklenmesi, Sesli ikaz testi. |
+| **09:00** | 🚀 **Rail Integration** | Tüm Ekip | Roketin raya sürülmesi. |
+| **09:15** | 💣 **Continuity Check** | RSO | Ateşleme devresinin (Igniter) direnç kontrolü. |
+| **10:00** | 🔥 **GO FOR LAUNCH!** | LCO | 5.. 4.. 3.. 2.. 1.. 🚀 |
+| **10:15** | 📡 **Kurtarma Takibi** | Yer İstasyonu | Teleskop ve Yagi anten ile iniş takibi. |
+| **12:00** | 📦 **Recover & Analyze** | Kurtarma | Roketin bulunması, SD kartların alınması. |
 
 ---
 
