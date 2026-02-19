@@ -1,19 +1,11 @@
-# 🚀 PROXIMA MISSION: PERSONAL ARCHIVE
-> **⚠️ PROJECT STATUS: CANCELLED / PERSONAL ARCHIVE**
->
-> **TR:** Bu proje ("Proxima Misyonu") resmi olarak **İPTAL EDİLMİŞTİR**.
-> Bu depo artık geliştiricinin (@bahattinyunus) **şahsi projesi ve teknik arşivi** olarak hizmet vermektedir. Herhangi bir takım veya kurum ile resmi bir bağı yoktur. Aşağıdaki içerik, projenin iptal edilmeden önceki teknik durumunu yansıtmaktadır.
->
-> **EN:** This project ("Proxima Mission") has been officially **CANCELLED**.
-> This repository now serves as the **personal project and technical archive** of the developer (@bahattinyunus). It is not affiliated with any team or institution. The content below reflects the technical state of the project prior to cancellation.
-
+# 🚀 PROXIMA: HIGH-ALTITUDE SOUNDING ROCKET
 
 > **"Mükemmellik bir eylem değil, bir alışkanlıktır." - Aristoteles**
-> Bu depo, Spaceport America Cup (IREC) 30k SRAD kategorisi için geliştirilen "Proxima" roketinin teknik dokümantasyonunu ("Technical Data Package"), mühendislik analizlerini ve operasyonel prosedürlerini içerir.
+> Bu depo, 30.000 ft irtifayı hedefleyen ve tamamen özgün mühendislik disiplinleriyle geliştirilen "Proxima" roketinin teknik dokümantasyonunu, analizlerini ve AR-GE süreçlerini içerir.
 
 <div align="center">
 
-![Badge](https://img.shields.io/badge/MISSION-CANCELLED-red?style=for-the-badge) ![Badge](https://img.shields.io/badge/STATUS-ARCHIVED-inactive?style=for-the-badge) ![Badge](https://img.shields.io/badge/OWNERSHIP-PERSONAL-blue?style=for-the-badge)
+![Badge](https://img.shields.io/badge/PROJECT-PROXIMA-blueviolet?style=for-the-badge) ![Badge](https://img.shields.io/badge/STATUS-ACTIVE_DEVELOPMENT-success?style=for-the-badge) ![Badge](https://img.shields.io/badge/LEVEL-HIGH_POWER_ROCKETRY-orange?style=for-the-badge)
 
 [**📜 YOL HARİTASI**](ROADMAP.md) • [**📚 KAYNAKLAR**](docs/RESOURCES.md) • [**📖 SÖZLÜK**](docs/GLOSSARY.md) • [**🧪 MALZEME**](docs/04_Subsystems_&_Payload/03_Aerostructures/Material_Properties.md) • [**📋 PROSEDÜRLER**](docs/03_Safety_&_SRAD/Checklists/)
 
@@ -22,24 +14,23 @@
 ---
 
 ## 📂 0. DOKÜMANTASYON VE NAVİGASYON REHBERİ
-Bu repo, binlerce satır kod ve teknik dokümandan oluşur. Aradığınızı bulmanız için rehber:
+Bu repo, ileri seviye roketçilik mühendisliği içeren kapsamlı bir teknik kütüphanedir:
 
 | Belge | Fragman (İçerik Özeti) | Erişim |
 | :--- | :--- | :--- |
-| **📜 YOL HARİTASI** | Projenin 2 yıllık stratejik "Master Planı". (Arşiv) | [👉 Detaylar](ROADMAP.md) |
-| **📚 KAYNAKLAR** | "Nasıl Kazanılır?" IREC şampiyonlarının raporları, kritik kitaplar ve eğitim videoları. | [👉 Kütüphaneye Git](docs/RESOURCES.md) |
-| **📖 SÖZLÜK** | CATO, Apogee, SRAD ne demek? Roketçilik terminolojisine hakim olun. | [👉 Öğren](docs/GLOSSARY.md) |
-| **🧪 MALZEME VERİSİ** | Analizler için gerekli gerçek "Engineering Data". (Alüminyum 6061, Karbon Fiber vb.) | [👉 Verileri Al](docs/04_Subsystems_&_Payload/03_Aerostructures/Material_Properties.md) |
-| **📋 PROSEDÜRLER** | Roketi patlatmadan uçurmak için: Montaj, Rampa ve Kurtarma adım adım kontrol listeleri. | [👉 Uygula](docs/03_Safety_&_SRAD/Checklists/) |
-| **🛡️ SAVAŞ KURALLARI** | Repoya kod gönderirken uymanız gereken disiplin kuralları. | [👉 Oku](CONTRIBUTING.md) |
+| **📜 YOL HARİTASI** | Projenin teknik gelişim süreci ve gelecek hedefleri. | [👉 Detaylar](ROADMAP.md) |
+| **📚 KAYNAKLAR** | Literatür taraması, makaleler ve referans alınan kaynaklar. | [👉 Kütüphaneye Git](docs/RESOURCES.md) |
+| **📖 SÖZLÜK** | Roket bilimi terminolojisi ve kısaltmalar. | [👉 Öğren](docs/GLOSSARY.md) |
+| **🧪 MALZEME VERİSİ** | Analizler için kullanılan materyal verileri (Kompozit, Alaşımlar). | [👉 Verileri Al](docs/04_Subsystems_&_Payload/03_Aerostructures/Material_Properties.md) |
+| **📋 PROSEDÜRLER** | Montaj, Entegrasyon ve Test (AIT) prosedürleri. | [👉 Uygula](docs/03_Safety_&_SRAD/Checklists/) |
+| **🛡️ SAVAŞ KURALLARI** | Geliştirme ve kod standartları. | [👉 Oku](CONTRIBUTING.md) |
 
 ---
 
 ## 📋 1. MİSYON PROFİLİ (Mission Profile)
-**Proje Adı:** Proxima (Şahsi Arşiv)
-**Yarışma:** Spaceport America Cup (IREC) - 30k SRAD (İptal)
-**Konum:** Spaceport America, New Mexico, ABD
-**Hedef:** 4 kg (8.8 lb) bilimsel faydalı yükü tam 30,000 ft (9,144m) irtifaya çıkarmak ve güvenli bir şekilde kurtarmak.
+**Proje Adı:** Proxima
+**Kategori:** High Power Rocketry (HPR) - L3 Level
+**Hedef:** 4 kg bilimsel faydalı yükü 30,000 ft irtifaya çıkarmak ve güvenli kurtarmak.
 
 ### Temel Performans Parametreleri (KPI)
 | Parametre | Hedef Değer | Tolerans | Kritik Limit |
@@ -298,9 +289,9 @@ Bu proje, geliştiricisinin önceki çalışmalarına ve birikimine dayanmaktad�
 ---
 
 ## 📞 İLETİŞİM
-Bu bir **kişisel arşiv** projesidir. Geliştirici ile iletişime geçmek için GitHub profilini kullanabilirsiniz.
-- **Developer:** [@bahattinyunus](https://github.com/bahattinyunus)
+Benimle iletişime geçmek için GitHub profilimi veya aşağıdaki kanalları kullanabilirsiniz:
+- **Geliştirici:** [@bahattinyunus](https://github.com/bahattinyunus)
 
 ---
 ### ⚖️ Yasal Uyarı (Disclaimer)
-Bu depo, akademik ve eğitim amaçlı bir **şahsi arşivdir**. İçerikteki bazı teknolojiler (özellikle itki ve navigasyon sistemleri), uluslararası ihracat kontrol düzenlemelerine (EAR/ITAR) tabi olabilir. Kullanıcılar, yerel ve uluslararası yasalara uymakla yükümlüdür. Bu kodların kullanımıyla oluşabilecek herhangi bir kazadan geliştirici sorumlu tutulamaz.
+Bu depo, akademik ve eğitim amaçlı bir **kişisel projedir**. İçerikteki bazı teknolojiler (özellikle itki ve navigasyon sistemleri), uluslararası düzenlemelere tabi olabilir. Bu kodların kullanımıyla oluşabilecek durumlardan kullanıcı sorumludur.
