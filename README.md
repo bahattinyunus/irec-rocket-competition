@@ -1,11 +1,11 @@
-# 🚀 PROXIMA: HIGH-ALTITUDE SOUNDING ROCKET
+# 🚀 TULPAR: HIGH-ALTITUDE SOUNDING ROCKET
 
 > **"Mükemmellik bir eylem değil, bir alışkanlıktır." - Aristoteles**
-> Bu depo, 30.000 ft irtifayı hedefleyen ve tamamen özgün mühendislik disiplinleriyle geliştirilen "Proxima" roketinin teknik dokümantasyonunu, analizlerini ve AR-GE süreçlerini içerir.
+> Bu depo, 30.000 ft irtifayı hedefleyen ve tamamen özgün mühendislik disiplinleriyle geliştirilen "TULPAR" roketinin teknik dokümantasyonunu, analizlerini ve AR-GE süreçlerini içerir.
 
 <div align="center">
 
-![Badge](https://img.shields.io/badge/PROJECT-PROXIMA-blueviolet?style=for-the-badge) ![Badge](https://img.shields.io/badge/STATUS-ACTIVE_DEVELOPMENT-success?style=for-the-badge) ![Badge](https://img.shields.io/badge/LEVEL-HIGH_POWER_ROCKETRY-orange?style=for-the-badge)
+![Badge](https://img.shields.io/badge/PROJECT-TULPAR-blueviolet?style=for-the-badge) ![Badge](https://img.shields.io/badge/STATUS-ACTIVE_DEVELOPMENT-success?style=for-the-badge) ![Badge](https://img.shields.io/badge/LEVEL-HIGH_POWER_ROCKETRY-orange?style=for-the-badge)
 
 [**📜 YOL HARİTASI**](ROADMAP.md) • [**📚 KAYNAKLAR**](docs/RESOURCES.md) • [**📖 SÖZLÜK**](docs/GLOSSARY.md) • [**🧪 MALZEME**](docs/04_Subsystems_&_Payload/03_Aerostructures/Material_Properties.md) • [**📋 PROSEDÜRLER**](docs/03_Safety_&_SRAD/Checklists/)
 
@@ -28,7 +28,7 @@ Bu repo, ileri seviye roketçilik mühendisliği içeren kapsamlı bir teknik k�
 ---
 
 ## 📋 1. MİSYON PROFİLİ (Mission Profile)
-**Proje Adı:** Proxima
+**Proje Adı:** TULPAR
 **Kategori:** High Power Rocketry (HPR) - L3 Level
 **Hedef:** 4 kg bilimsel faydalı yükü 30,000 ft irtifaya çıkarmak ve güvenli kurtarmak.
 

@@ -2,7 +2,7 @@
 
 ![Banner](../../assets/banner.png)
 
-**Proje Adı:** Proxima Mission
+**Proje Adı:** TULPAR
 **Tarih:** [Tarih Giriniz]
 **Hazırlayanlar:** [Takım Üyeleri]
 
